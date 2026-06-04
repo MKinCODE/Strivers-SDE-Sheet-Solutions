@@ -1,5 +1,6 @@
 #include <vector>
 using namespace std;
+//a very diff question using flyod's tortoise and hare algo and treating array like LL
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
