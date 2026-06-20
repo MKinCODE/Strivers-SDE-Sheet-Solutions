@@ -14,7 +14,8 @@ public:
             return;
         }
         for(int j=0; j<n; j++){
-            if(board[row][j]=='.' && !col[j] && !diag1[row-j+n-1] && !diag2[row+j]){
+            if(col[j] || diag1[row-j+n-1] || diag2[row+j]) continue;
+            
                 board[row][j]='Q';
                 col[j]=true;
                 diag1[row-j+n-1]=true;
@@ -24,7 +25,6 @@ public:
                 col[j]=false;
                 diag1[row-j+n-1]=false;
                 diag2[row+j]=false;
-            }
         }
     }
     vector<vector<string>> solveNQueens(int n) {
